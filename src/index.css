@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #7b45df; /* Orange */
+  --accent-color: rgb(113, 11, 247); /* Red */
+  --text-color: #fff; /* White */
+  --bg-color: #0a0611; /* Dark background */
+  --bg-secondary: #1c1620e8; /* Darker background */
+  --gradient-primary: linear-gradient(to right, #484d53, #007bff);
+  --gradient-secondary: linear-gradient(to right, #484d53, #ff6347);
+  --text-shadow-color: rgba(89, 0, 255, 0.582);
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+h1, h2, h3, input, button {
+  font-family: 'Press Start 2P', system-ui;
+  text-shadow: 0 0 10px var(--text-shadow-color);
+}
+
+
+h1, h2, h3 {
+  color: linear-gradient(to right, #281d2c, #6a8dec, #0000ff);
+  
+  -webkit-text-fill-color: transparent;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: var(--bg-color);
+  gap: 14px;
+}
+
+
+
+header {
+  display: flex;
+  align-items: stretch;
+}
+
+header, .main {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 14px;
+}
+
+header input {
+  flex: 1;
+  border-radius: 14px;
+  outline: none;
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header button {
+  border-radius: 14px;
+  background: transparent;
+  transition-duration: 200ms;
+  cursor: pointer;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header button:hover {
+  opacity: 0.7;
+}
+
+header button, header input {
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.todoItem p {
+  flex: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.actionsContainer button {
+  background-color: var(--accent-color); /* Use the accent color */
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.actionsContainer button:hover {
+  background-color: darken(var(--accent-color), 10%); /* Darker accent color on hover */
+}
+
+@media (min-width: 640px) {
+  header button, header input {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
